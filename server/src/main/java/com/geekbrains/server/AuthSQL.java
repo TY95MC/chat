@@ -43,6 +43,8 @@ public class AuthSQL implements AutoCloseable{
     public String findByLoginAndPassword(String login, String password){
         ResultSet resultSet = null;
         Statement statement = null;
+//        login = "alex";  пытался вручную вбить логин и пароль сюда, а также в класс клиентхендлер, но в приложение не впускает. не могу найти причину этой проблемы
+//        password = "606060";
 
         try {
             statement = connection.createStatement();

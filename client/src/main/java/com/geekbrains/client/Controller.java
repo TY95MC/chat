@@ -63,6 +63,8 @@ public class Controller implements Initializable {
 
     public void sendMsg() {
         if (Network.sendMsg(msgField.getText())) {
+            LogOfChat chatLog = new LogOfChat();
+            chatLog.getUserMsg();
             msgField.clear();
             msgField.requestFocus();
         }
